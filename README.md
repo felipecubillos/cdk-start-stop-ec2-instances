@@ -1,14 +1,28 @@
-# Welcome to your CDK TypeScript project
+# Start and Stop EC2 Instances using Eventbridge Scheduler
 
-This is a blank project for CDK development with TypeScript.
+A CDK project that creates an eventbridge scheduler with Universal targets calling EC2 startInstances and stopIntances
 
-The `cdk.json` file tells the CDK Toolkit how to execute your app.
+![Architecture](/architecture.png "AWS Architecture")
 
-## Useful commands
+## Deployment
 
-* `npm run build`   compile typescript to js
-* `npm run watch`   watch for changes and compile
-* `npm run test`    perform the jest unit tests
-* `npx cdk deploy`  deploy this stack to your default AWS account/region
-* `npx cdk diff`    compare deployed stack with current state
-* `npx cdk synth`   emits the synthesized CloudFormation template
+To deploy this project follow this steps :
+
+1. Deploy the project
+   \*\*Remember to update the ParameterNames.ts file with your account information.
+
+```bash
+npm i
+npx aws-cdk deploy
+```
+
+2. Clean Up the project (Avoid unexpected costs)
+
+```bash
+npx aws-cdk destroy
+```
+
+## Read more about it in my blog
+
+[![Blog](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://acubillos.hashnode.dev/)
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/felipecubillos/)
